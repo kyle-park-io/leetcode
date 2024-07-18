@@ -1,48 +1,67 @@
 func maxDepth(s string) int {
-	l_max := 0
-	plus := 0
-	minus := 0
-	result := 0
 
-	for _, val := range s {
-		if val == '(' {
-			l_max++
-		}
-	}
-
-	for _, val := range s {
-		if val == '(' {
-			plus++
-		}
-		if val == ')' {
-			minus++
-		}
-
-		if l_max == plus {
-			result = plus - minus
-			break
-		}
-	}
-	plus = 0
-	minus = 0
-
-	for i := len(s) - 1; i >= 0; i-- {
-		if s[i] == ')' {
-			plus++
-		}
+	depth := 0
+	depth_temp := 0
+	for i := 0; i < len(s); i++ {
 		if s[i] == '(' {
-			minus++
-		}
-		if l_max == plus {
-			if result < plus-minus {
-				result = plus - minus
+			depth_temp++
+			if depth_temp > depth {
+				depth = depth_temp
 			}
-			break
+		}
+		if s[i] == ')' {
+			depth_temp--
 		}
 	}
-
-	return result
+	return depth
 }
+
+// // wrong answer
+// func maxDepth(s string) int {
+// 	l_max := 0
+// 	plus := 0
+// 	minus := 0
+// 	result := 0
+
+// 	for _, val := range s {
+// 		if val == '(' {
+// 			l_max++
+// 		}
+// 	}
+
+// 	for _, val := range s {
+// 		if val == '(' {
+// 			plus++
+// 		}
+// 		if val == ')' {
+// 			minus++
+// 		}
+
+// 		if l_max == plus {
+// 			result = plus - minus
+// 			break
+// 		}
+// 	}
+// 	plus = 0
+// 	minus = 0
+
+// 	for i := len(s) - 1; i >= 0; i-- {
+// 		if s[i] == ')' {
+// 			plus++
+// 		}
+// 		if s[i] == '(' {
+// 			minus++
+// 		}
+// 		if l_max == plus {
+// 			if result < plus-minus {
+// 				result = plus - minus
+// 			}
+// 			break
+// 		}
+// 	}
+
+// 	return result
+// }
 
 // // wrong answer
 // func maxDepth(s string) int {
