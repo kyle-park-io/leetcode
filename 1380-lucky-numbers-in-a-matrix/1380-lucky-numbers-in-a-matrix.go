@@ -15,13 +15,17 @@ func luckyNumbers(matrix [][]int) []int {
 			}
 		}
 
+		if check_x[x] {
+			continue
+		}
+
 		for j := 0; j < len(matrix[0]); j++ {
 			if max > matrix[x][j] {
 				max = matrix[x][j]
 			}
 		}
 
-		if check == max && !check_x[x] {
+		if check == max {
 			check_x[x] = true
 			result = append(result, check)
 		}
