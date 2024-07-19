@@ -15,6 +15,7 @@ func luckyNumbers(matrix [][]int) []int {
 			}
 		}
 
+        // why much slower?
 		if check_x[x] {
 			continue
 		}
