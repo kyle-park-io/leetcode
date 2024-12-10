@@ -19,6 +19,7 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 			return
 		}
 
+		// case 1:
 		if trial_y >= n {
 			if trial_x < m {
 				result[trial] = nums1[trial_x]
@@ -29,17 +30,22 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 			continue
 		}
 
+		// case 2:
 		if trial_x >= m {
 			result[trial] = nums2[trial_y]
 			trial_y++
+
+			trial++
+			continue
+		}
+
+		// case 3:
+		if nums1[trial_x] < nums2[trial_y] {
+			result[trial] = nums1[trial_x]
+			trial_x++
 		} else {
-			if nums1[trial_x] < nums2[trial_y] {
-				result[trial] = nums1[trial_x]
-				trial_x++
-			} else {
-				result[trial] = nums2[trial_y]
-				trial_y++
-			}
+			result[trial] = nums2[trial_y]
+			trial_y++
 		}
 
 		trial++
