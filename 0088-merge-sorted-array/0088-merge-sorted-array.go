@@ -1,12 +1,12 @@
 func merge(nums1 []int, m int, nums2 []int, n int) {
 
 	result := make([]int, m+n)
-	if n == 0 {
-		result = nums1[:m]
-		// nums1 = result
-		copy(nums1, result)
-		return
-	}
+	// if n == 0 {
+	// 	result = nums1[:m]
+	// 	// nums1 = result
+	// 	copy(nums1, result)
+	// 	return
+	// }
 
 	trial := 0
 	trial_x := 0
