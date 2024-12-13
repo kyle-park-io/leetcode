@@ -18,6 +18,7 @@ func isAnagram(s string, t string) bool {
 	_ = t_arr3
 	// map (a~z)
 	map_all := make(map[rune]struct{})
+	_ = map_all
 
 	// // case1:
 	// for _, v := range s {
@@ -38,20 +39,38 @@ func isAnagram(s string, t string) bool {
 	// }
 	// return true
 
-	// case2:
-	for _, v := range s {
-		s_arr3[v-97]++
-		map_all[v-97] = struct{}{}
+	// // case2:
+	// for _, v := range s {
+	// 	s_arr3[v-97]++
+	// 	map_all[v-97] = struct{}{}
+	// }
+	// for _, v := range t {
+	// 	t_arr3[v-97]++
+	// 	map_all[v-97] = struct{}{}
+	// }
+	// for i := range map_all {
+	// 	if s_arr3[i] != t_arr3[i] {
+	// 		return false
+	// 	}
+	// }
+	// return true
+
+	// case3:
+	if len(s) != len(t) {
+		return false
 	}
-	for _, v := range t {
-		t_arr3[v-97]++
-		map_all[v-97] = struct{}{}
-	}
-	for i := range map_all {
-		if s_arr3[i] != t_arr3[i] {
+	copied_s := []rune(s)
+	copied_t := []rune(t)
+	sort.Slice(copied_s, func(i, j int) bool {
+		return copied_s[i] < copied_s[j]
+	})
+	sort.Slice(copied_t, func(i, j int) bool {
+		return copied_t[i] < copied_t[j]
+	})
+	for i := 0; i < len(copied_s); i++ {
+		if copied_s[i] != copied_t[i] {
 			return false
 		}
 	}
 	return true
-
 }
