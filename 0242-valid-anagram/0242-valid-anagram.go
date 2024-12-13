@@ -1,7 +1,7 @@
 func isAnagram(s string, t string) bool {
+
 	// UTF-8(ASCII)
 	// a~z (97~122)
-
 	// s
 	s_arr1 := [26]int{}
 	s_arr2 := make([]int, 26)
@@ -17,17 +17,37 @@ func isAnagram(s string, t string) bool {
 	_ = t_arr2
 	_ = t_arr3
 
+	// case1:
 	for _, v := range s {
-		s_arr1[v-97]++
+		// s_arr1[v-97]++
+		s_arr2[v-97]++
 	}
 	for _, v := range t {
-		t_arr1[v-97]++
+		// t_arr1[v-97]++
+		t_arr2[v-97]++
 	}
 	for i := 0; i < len(s_arr1); i++ {
-		if s_arr1[i] != t_arr1[i] {
+		// if s_arr1[i] != t_arr1[i] {
+		// 	return false
+		// }
+		if s_arr2[i] != t_arr2[i] {
 			return false
 		}
 	}
-
 	return true
+
+	// // case2:
+	// result := false
+	// for _, v := range s {
+	// 	s_arr1[v-97]++
+	// }
+	// for _, v := range t {
+	// 	t_arr1[v-97]++
+	// 	if s_arr1[v-97] == t_arr1[v-97] {
+	// 		result = true
+	// 	} else {
+	// 		result = false
+	// 	}
+	// }
+	// return result
 }
