@@ -12,6 +12,7 @@
 ## Array
 |  |
 | ------- |
+| [0045-jump-game-ii](https://github.com/kyle-park-io/leetcode/tree/master/0045-jump-game-ii) |
 | [0088-merge-sorted-array](https://github.com/kyle-park-io/leetcode/tree/master/0088-merge-sorted-array) |
 | [0134-gas-station](https://github.com/kyle-park-io/leetcode/tree/master/0134-gas-station) |
 | [0169-majority-element](https://github.com/kyle-park-io/leetcode/tree/master/0169-majority-element) |
@@ -51,6 +52,11 @@
 ## Greedy
 |  |
 | ------- |
+| [0045-jump-game-ii](https://github.com/kyle-park-io/leetcode/tree/master/0045-jump-game-ii) |
 | [0134-gas-station](https://github.com/kyle-park-io/leetcode/tree/master/0134-gas-station) |
 | [0455-assign-cookies](https://github.com/kyle-park-io/leetcode/tree/master/0455-assign-cookies) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0045-jump-game-ii](https://github.com/kyle-park-io/leetcode/tree/master/0045-jump-game-ii) |
 <!---LeetCode Topics End-->
