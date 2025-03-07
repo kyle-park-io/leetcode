@@ -49,6 +49,7 @@
 |  |
 | ------- |
 | [0242-valid-anagram](https://github.com/kyle-park-io/leetcode/tree/master/0242-valid-anagram) |
+| [0257-binary-tree-paths](https://github.com/kyle-park-io/leetcode/tree/master/0257-binary-tree-paths) |
 ## Greedy
 |  |
 | ------- |
@@ -59,4 +60,20 @@
 |  |
 | ------- |
 | [0045-jump-game-ii](https://github.com/kyle-park-io/leetcode/tree/master/0045-jump-game-ii) |
+## Backtracking
+|  |
+| ------- |
+| [0257-binary-tree-paths](https://github.com/kyle-park-io/leetcode/tree/master/0257-binary-tree-paths) |
+## Tree
+|  |
+| ------- |
+| [0257-binary-tree-paths](https://github.com/kyle-park-io/leetcode/tree/master/0257-binary-tree-paths) |
+## Depth-First Search
+|  |
+| ------- |
+| [0257-binary-tree-paths](https://github.com/kyle-park-io/leetcode/tree/master/0257-binary-tree-paths) |
+## Binary Tree
+|  |
+| ------- |
+| [0257-binary-tree-paths](https://github.com/kyle-park-io/leetcode/tree/master/0257-binary-tree-paths) |
 <!---LeetCode Topics End-->
